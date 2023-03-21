@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container_information">
+  <div class="container__contact">
+    <p class="info__content" style="margin-right: 5%;">
+      Ubicación: Calle Principal #123, Centro, Ciudad
+      <br>
+      <br>
+      Correo electrónico: info@imperiolibros.com
+      <br><br>
+      Horario de atención:
+      <br>
+      lunes a sábado de 10:00 a.m. a 8:00 p.m.
+      <br>
+      domingos de 11:00 a.m. a 6:00 p.m.
+      <br><br>
+      Redes sociales: puedes encontrarnos en
+      <br>
+      <i class="fab fa-facebook-f">  Facebook como @imperiolibros</i>
+      <br>
+      <i class="fab fa-instagram">  Instagram como @imperiolibros_ciudad</i>
+    </p>
+  </div>
+  <div class="container__form">
+    <form action="">
+      <h1 class="info__title">¡GRACIAS POR ELEGIRNOS!</h1>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Correo electronico</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Comentarios o sugerencias</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="container_btn">
+        <button class="btn btn-success">ENVIAR</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

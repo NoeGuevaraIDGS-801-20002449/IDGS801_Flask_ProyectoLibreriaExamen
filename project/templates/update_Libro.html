@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-form" style="width: 75%; margin-left: auto; margin-right: auto; margin-top: 3.5rem;">
+  <form name="sent" id="form1" method="POST" style="width: 50%;">
+    <h2 class="title-form" style="text-align: center; font-weight: bold; ">MODIFICACIÓN DEL LIBRO</h2>
+    <div style="text-align: center;">
+      <div class="row control-group">
+        <div class="input-group mb-3">
+          <span class="input-group-text">ID LIBRO</span>
+          <input type="text" class="form-control" id="id" name="id" value="{{id}}">
+        </div>
+      </div>
+      <div class="row control-group">
+        <div class="input-group mb-3">
+          <span class="input-group-text">NOMBRE DEL LIBRO</span>
+          <input type="text" class="form-control" id="nombre" name="nombre" value="{{nombre}}">
+        </div>
+      </div>
+      <div class="row control-group">
+        <div class="input-group mb-3">
+        <span class="input-group-text">AUTOR DEL LIBRO</span>
+          <input type="text" class="form-control" id="autor" name="autor" value="{{autor}}">
+        </div>
+      </div>
+      <div class="row control-group">
+        <div class="input-group mb-3">
+          <span class="input-group-text">NÚMERO DE EDICION</span>
+          <input type="number" class="form-control" id="tomo" name="tomo" value="{{tomo}}">
+        </div>
+      </div>
+      <div class="row control-group">
+        <div class="input-group mb-3">
+          <span class="input-group-text">PRECIO</span>
+          <input type="number" class="form-control" id="precio" name="precio" value="{{precio}}">
+        </div>
+      </div>
+      <div class="row control-group">
+        <div class="input-group mb-3">
+          <span class="input-group-text">EXISTENCIA DEL LIBRO</span>
+          <input type="text" class="form-control" id="estatus" name="estatus" value="{{estatus}}">
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+      <input type="submit" id="reg-alum" name="registra" value="MODIFICAR" class="btn btn-primary" />
+      <a href="{{ url_for('main.admin') }}" class="btn btn-success">REGRESAR</a>
+    </div>
+  </form>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="info__title">Bienvenido <b style="color: goldenrod;"> {{ name }}</b></h1>
+<div class="container_mangas"
+  style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; width: 100vw; justify-content: center;">
+  {% for libro in libros %}
+  <div class="card"
+    style="width: 18rem; height: auto; margin: 0.5rem; background-color: #EDEAE9; border: solid thick  black;">
+    <img src="../static/img/{{libro.name}}.jpg" class="card-img-top" alt="{{ libro.name }}"
+      style="width: 5rem; margin-left: auto; margin-right: auto; margin-top: 1rem;">
+    <div class="card-body">
+      <li style="list-style: none;">
+
+        <ul><b>NOMBRE:</b><b style="color: black"> {{ libro.name }}</b></ul>
+        <ul><b>AUTOR:</b><b style="color: black;"> {{ libro.author }}</b></ul>
+        <ul><b>NUM. EDICION:</b><b style="color: black;"> {{ libro.tomo }}</b></ul>
+        <ul><b>PRECIO:</b><b style="color: black;"> ${{ libro.price }}</b></ul>
+        <ul><b>ESTATUS:</b>{% if libro.exist == 'RENTADO' %}<b style="color: goldenrod;"> {{ libro.exist }}</b>{% else %}<b
+            style="color: green;"> {{ libro.exist }}</b>{% endif %}
+        </ul>
+      </li>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
